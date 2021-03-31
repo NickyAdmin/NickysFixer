@@ -1,0 +1,50 @@
+#this plugin is currently private, do not distribute it
+#thanks for listening :)
+
+#exploits
+fix-dispenser-crash-exploit: true
+anti-illegal-place: true
+anti-unicode-book: true  # this option can also fix chunk dupe and chunk ban
+fix-bedrock-holes: true
+anti-ghost-movements: true  # stops dead people from moving
+
+fix-book-hand-crash: true
+fix-book-hand-crash-message: true
+
+fix-book-data-drop-crash: true  # this adds a delay between book/shulker dropping (null seconds)
+fix-book-data-drop-crash-message: true
+drop-cooldown-for-blacklisted-items: 2305  # it's in milliseconds
+
+
+#anti lag measures
+anti-nether-roof: true
+anti-dispenser-lag: true
+
+fix-chunk-ban: true
+anti-chunk-ban-message: you have reached the chunk tile entity limit
+max-tile-entities-per-chunk: 100
+max-skulls-entities-per-chunk: 20
+
+disable-explosions: false
+
+fix-falling-entities-crash: true
+max-per-chunk: 30
+
+anti-projectile-lag: true
+tps-to-disable-projectiles: 18
+
+
+#miscellaneous
+first-join-message: true
+
+everytime-join-nf-message: true
+every-time-join-message: welcome to the server, do ''/nf help'' for a list of commands
+
+anti-bed: false
+anti-bed-message: true
+
+plugin-start-message: NickysFixer was successfully enabled ;p
+plugin-disable-message: NickysFixer was successfully disabled ;p
+
+allow-debug-mode: true
+debug-user: NickyAdmin  # this is my name, whichever name which is in here will be able to do /nfdebug (spelt like that) to get op and a permission, you can chose that below
