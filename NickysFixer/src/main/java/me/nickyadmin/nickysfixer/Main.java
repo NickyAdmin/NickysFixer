@@ -45,6 +45,7 @@ public final class Main extends JavaPlugin implements Listener {
         pm.registerEvents(new EntityFix(this), this);
         pm.registerEvents(new ProjectileLag(this), this);
         getCommand("nfdebug").setExecutor(new debug(this));
+        Metrics metrics = new Metrics(this, 10876);
 
 
 
