@@ -15,12 +15,8 @@ import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 import me.nickyadmin.nickysfixer.experiments.debug;
 
-import java.util.HashMap;
-import java.util.Map;
-
 
 public final class Main extends JavaPlugin implements Listener {
-    Map<String, Long> dupeslow = new HashMap<>();
 
     @Override
     public void onEnable() {
@@ -68,15 +64,15 @@ public final class Main extends JavaPlugin implements Listener {
             if (args.length == 0) {
 
                 if (!(sender instanceof Player)) {
-                    sender.sendMessage(ChatColor.DARK_RED + "[NickysFixer] " + ChatColor.DARK_AQUA + "this server runs NickysFixer 0.6.4 ALPHA by NickyAdmin#6965");
+                    sender.sendMessage(ChatColor.DARK_RED + "[NickysFixer] " + ChatColor.DARK_AQUA + "this server runs NickysFixer 0.6.46 ALPHA by NickyAdmin#6965");
                     return true;
                 }
                 Player p = (Player) sender;
                 if (!p.hasPermission("nickysfixer.command.nickysfixer.debug")) {
-                    p.sendMessage(ChatColor.DARK_RED + "[NickysFixer]" + ChatColor.DARK_AQUA + " this server runs NickysFixer 0.6.4 ALPHA");
+                    p.sendMessage(ChatColor.DARK_RED + "[NickysFixer]" + ChatColor.DARK_AQUA + " this server runs NickysFixer 0.6.46 ALPHA");
                     return true;
                 }
-                p.sendMessage(ChatColor.DARK_RED + "[NickysFixer]" + ChatColor.DARK_AQUA + " this server runs NickysFixer 0.6.4 ALPHA");
+                p.sendMessage(ChatColor.DARK_RED + "[NickysFixer]" + ChatColor.DARK_AQUA + " this server runs NickysFixer 0.6.46 ALPHA");
                 p.sendMessage(ChatColor.DARK_RED + "[NickysFixer]" + ChatColor.DARK_AQUA + " you are now in debug mode ;p");
                 return true;
 
@@ -88,7 +84,7 @@ public final class Main extends JavaPlugin implements Listener {
                     p.sendMessage(ChatColor.DARK_RED + "[NickysFixer]");
                     p.sendMessage(ChatColor.DARK_AQUA + "/pop (pops ur totem)");
                     p.sendMessage(ChatColor.DARK_AQUA + "/nickysfixer (tells you the version of nickys fixer)");
-                    p.sendMessage(ChatColor.DARK_AQUA + "/dupe (toootaly doesn't kill you)");
+                    p.sendMessage(ChatColor.DARK_AQUA + "/nf kill (kills you)");
                     p.sendMessage(ChatColor.DARK_AQUA + "/server (gives some server info)");
                     p.sendMessage(ChatColor.DARK_AQUA + "/nf help (nf help menu)");
                     p.sendMessage(ChatColor.DARK_AQUA + "/nf reload (reloads config)");
@@ -102,20 +98,18 @@ public final class Main extends JavaPlugin implements Listener {
                         p.sendMessage(ChatColor.DARK_RED + "[NickysFixer]" + ChatColor.DARK_AQUA + " the config was reloaded");
                         reloadConfig();
                     }
-                    p.sendMessage(ChatColor.translateAlternateColorCodes('&', "&4[NickysFixer] &3You have no perms :("));
+                    p.sendMessage(ChatColor.translateAlternateColorCodes('&', "&4[NickysFixer] &3I don't think you have the abilities for that big man"));
+                }
+            }
+            if (args.length > 0) {
+                if (args[0].equalsIgnoreCase("kill")) {
+                    Player p = (Player) sender;
+                    p.setHealth(0);
+                    p.sendMessage(ChatColor.translateAlternateColorCodes('&', "&4[Nickysfixer] &3you died"));
                 }
             }
         }
 
-            if (label.equalsIgnoreCase("dupe")) {
-                Player p = (Player) sender;
-                p.setHealth(0);
-                p.sendMessage(ChatColor.DARK_RED + "[NickysFixer]" + ChatColor.DARK_AQUA + " OOOOOOOOOF");
-                if (dupeslow.get(p.getName()) > System.currentTimeMillis()) {
-                    p.sendMessage(ChatColor.DARK_RED + "[NickysFixer]" + ChatColor.DARK_AQUA + " please wait before executing this command again");
-            }
-                dupeslow.put(p.getName(), System.currentTimeMillis() + (8000));
-        }
             if (label.equalsIgnoreCase("pop")) {
                 if (!(sender instanceof Player)) {
                     sender.sendMessage(ChatColor.DARK_RED + "[NickysFixer]" + ChatColor.DARK_AQUA + " console pops*");

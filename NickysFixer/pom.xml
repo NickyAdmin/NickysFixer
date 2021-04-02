@@ -6,7 +6,7 @@
 
     <groupId>me.nickyadmin</groupId>
     <artifactId>NickysFixer</artifactId>
-    <version>0.6.4 ALPHA</version>
+    <version>0.6.46 ALPHA</version>
     <packaging>jar</packaging>
 
     <name>Nickysfixer</name>

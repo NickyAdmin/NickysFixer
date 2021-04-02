@@ -1,4 +1,4 @@
-package me.nickyadmin.nickysfixer.antilag;
+package me.nickyadmin.nickysfixer.events;
 
 import me.nickyadmin.nickysfixer.Main;
 import org.bukkit.Material;
@@ -20,7 +20,7 @@ import java.util.List;
         }
 
         List<Material> items = Arrays.asList(Material.FIREBALL, Material.SNOW_BALL, Material.EXP_BOTTLE, Material.EGG, Material.SPLASH_POTION,
-                Material.BOAT, Material.ARROW, Material.SPECTRAL_ARROW, Material.TIPPED_ARROW, Material.TIPPED_ARROW);
+                Material.BOAT, Material.ARROW, Material.SPECTRAL_ARROW);
 
         @EventHandler
         public void onDispense(BlockDispenseEvent event) {

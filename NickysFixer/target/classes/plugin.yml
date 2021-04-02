@@ -1,0 +1,13 @@
+name: NickysFixer
+version: 0.6.46 ALPHA
+main: me.nickyadmin.nickysfixer.Main
+authors: [ NickyAdmin ]
+description: fixes exploits and allows you to debug your server, and also adds some commands :p
+
+commands:
+  nickysfixer:
+    aliases: [nf, nickysfixes, n]
+  dupe:
+  pop:
+  server:
+  nfdebug:
