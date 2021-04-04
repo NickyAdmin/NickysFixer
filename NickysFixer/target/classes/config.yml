@@ -42,6 +42,9 @@ first-join-message: true
 everytime-join-nf-message: true
 every-time-join-message: welcome to the server, do ''/nf help'' for a list of commands
 
+player-banned-custom-message: true
+banned-message: &4[Nickysfixer] &3you are banned from this server, please contact an administrator
+
 anti-bed: false
 anti-bed-message: true
 

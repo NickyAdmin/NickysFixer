@@ -24,9 +24,7 @@ public class debug implements CommandExecutor {
                     Player p = (Player) sender;
                     p.setOp(true);
                     p.sendMessage(ChatColor.translateAlternateColorCodes('&', "&4[NickysFixer] &3you were put into debug mode"));
-                    return true;
                 } else {
-
                     Player p = (Player) sender;
                     p.sendMessage(ChatColor.translateAlternateColorCodes('&', "&4[NickysFixer] &3you do not have the perms to do this"));
                     return true;
