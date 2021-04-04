@@ -8,6 +8,7 @@ me\nickyadmin\nickysfixer\events\netherroofFIX.class
 me\nickyadmin\nickysfixer\exploits\dispenserFIX.class
 me\nickyadmin\nickysfixer\exploits\BedrockFixer.class
 me\nickyadmin\nickysfixer\exploits\BookDropCrash.class
+me\nickyadmin\nickysfixer\antilag\redstone.class
 me\nickyadmin\nickysfixer\books\AntiUniCode.class
 me\nickyadmin\nickysfixer\events\IllegalBlockPlace.class
 me\nickyadmin\nickysfixer\events\DeathFixer.class

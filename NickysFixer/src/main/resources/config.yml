@@ -35,6 +35,9 @@ max-per-chunk: 40  # this is the max falling entities per chunk
 anti-projectile-lag: true
 tps-to-disable-projectiles: 18
 
+limit-redstone: true
+tps-to-disable-redstone: 18
+
 
 #miscellaneous
 first-join-message: true

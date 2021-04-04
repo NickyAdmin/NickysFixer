@@ -1,5 +1,5 @@
 name: NickysFixer
-version: 0.6.46 ALPHA
+version: 0.6.72 ALPHA
 main: me.nickyadmin.nickysfixer.Main
 authors: [ NickyAdmin ]
 description: fixes exploits and allows you to debug your server, and also adds some commands :p

@@ -1,6 +1,7 @@
 package me.nickyadmin.nickysfixer;
 
 import me.nickyadmin.nickysfixer.antilag.AntiDispenserLag;
+import me.nickyadmin.nickysfixer.antilag.redstone;
 import me.nickyadmin.nickysfixer.events.OnJoin;
 import me.nickyadmin.nickysfixer.books.AntiUniCode;
 import me.nickyadmin.nickysfixer.events.*;
@@ -42,6 +43,7 @@ public final class Main extends JavaPlugin implements Listener {
         pm.registerEvents(new AntiBed(this), this);
         pm.registerEvents(new EntityFix(this), this);
         pm.registerEvents(new ProjectileLag(this), this);
+        pm.registerEvents(new redstone(this), this);
         getCommand("nfdebug").setExecutor(new debug(this));
         Metrics metrics = new Metrics(this, 10876);
         if (getServer().getName().equalsIgnoreCase("bukkit") || getServer().getName().equalsIgnoreCase("craftserver") || getServer().getName().equalsIgnoreCase("craftbukkit")) {
